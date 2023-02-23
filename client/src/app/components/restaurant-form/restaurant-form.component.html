@@ -1,0 +1,34 @@
+<div class="col-md-4-offset-md-4">
+    <div class="card">
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <input type="text" name="Name" placeholder="Restaurant Name" class="form-control" [(ngModel)]="restaurant.Name" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="Location" placeholder="Location" class="form-control" [(ngModel)]="restaurant.Location" >
+                </div>
+                <div class="form-group">
+                    <input type="text" name="Reviews" placeholder="5 stars" class="form-control" [(ngModel)]="restaurant.Reviews">
+                </div>
+                <div class="form-group">
+                    <textarea name="Description" placeholder="Description" class="form-control" rows="2" [(ngModel)]="restaurant.Description"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="MainDish" placeholder="Main Dish" class="form-control" [(ngModel)]="restaurant.Main_Dish">
+                </div>
+                <button class="btn btn-success btn-block" (click)="edit ? updateRestaurant() : saveNewRestaurant()">
+                    Save Restaurant
+                </button>
+
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4">
+    <div class="card card-body text-center">
+        <h3>{{restaurant.Name}}</h3>
+    </div>
+</div>
